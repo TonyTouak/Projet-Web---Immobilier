@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Immobilier Commercial</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 20px 0; 
+            font-weight: 700;
+            font-size: 2.5em; 
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin-top: 20px; 
+            justify-content: center; /* Centre les éléments de la galerie */
+        }
+        .gallery a {
+            width: 24%;
+            margin: 0.5%;
+            box-sizing: border-box;
+        }
+        .gallery img {
+            width: 100%;
+            height: 150px; 
+            object-fit: cover; 
+            display: block;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Liste propriétés commerciales</h1>
+    <div class="gallery">
+        <a href="IC1.html"><img src="IC1.png" alt="Commercial Property 1"></a>
+        <a href="IC2.html"><img src="IC2.png" alt="Commercial Property 2"></a>
+        <a href="IC3.html"><img src="IC3.png" alt="Commercial Property 3"></a>
+        <a href="IC4.html"><img src="IC4.png" alt="Commercial Property 4"></a>
+        <a href="IC5.html"><img src="IC5.png" alt="Commercial Property 5"></a>
+        <a href="IC6.html"><img src="IC6.png" alt="Commercial Property 6"></a>
+    </div>
+</body>
+</html>

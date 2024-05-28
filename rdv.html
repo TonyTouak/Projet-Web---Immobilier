@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prendre un RDV</title>  
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slots = document.querySelectorAll('.disponible');
+            slots.forEach(slot => {
+                slot.addEventListener('click', () => {
+                    alert('Le créneau est maintenant pris.');
+                    slot.classList.remove('disponible');
+                    slot.classList.add('indisponible');
+                    slot.style.cursor = 'not-allowed';
+                });
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 1000px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #d4e9c5;
+        }
+        .disponible {
+            background-color: white;
+            cursor: pointer;
+        }
+        .indisponible {
+            background-color: #2A1BC2;
+            color: white;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prendre un RDV</h1>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Lundi</th>
+                <th>Mardi</th>
+                <th>Mercredi</th>
+                <th>Jeudi</th>
+                <th>Vendredi</th>
+                <th>Samedi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>8h-10h</th>
+                <td class="indisponible"></td>
+                <td class="disponible"></td>
+                <td class="indisponible"></td>
+                <td class="disponible"></td>
+                <td class="indisponible"></td>
+                <td class="disponible"></td>
+            </tr>
+            <tr>
+                <th>10h-12h</th>
+                <td class="indisponible"></td>
+                <td class="disponible"></td>
+                <td class="indisponible"></td>
+                <td class="disponible"></td>
+                <td class="disponible"></td>
+                <td class="disponible"></td>
+            </tr>
+            <tr>
+                <th>12h-14h</th>
+                <td class="indisponible"></td>
+                <td class="disponible"></td>
+                <td class="indisponible"></td>
+                <td class="indisponible"></td>
+                <td class="indisponible"></td>
+                <td class="disponible"></td>
+            </tr>
+            <tr>
+                <th>14h-16h</th>
+                <td class="disponible"></td>
+                <td class="indisponible"></td>
+                <td class="indisponible"></td>
+                <td class="disponible"></td>
+                <td class="indisponible"></td>
+                <td class="indisponible"></td>
+            </tr>
+            <tr>
+                <th>16h-18h</th>
+                <td class="indisponible"></td>
+                <td class="disponible"></td>
+                <td class="indisponible"></td>
+                <td class="disponible"></td>
+                <td class="disponible"></td>
+                <td class="indisponible"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

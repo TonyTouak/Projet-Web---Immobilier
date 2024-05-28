@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terrains à vendre</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 20px 0; 
+            font-weight: 700;
+            font-size: 2.5em; 
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin-top: 20px; 
+        }
+        .gallery a {
+            width: 24%;
+            margin: 0.5%;
+            box-sizing: border-box;
+        }
+        .gallery img {
+            width: 100%;
+            height: 150px; 
+            object-fit: cover; 
+            display: block;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Liste des terrains à vendre</h1>
+    <div class="gallery">
+        <a href="terrain1.html"><img src="Terrain1.png" alt="Terrain 1"></a>
+        <a href="terrain2.html"><img src="Terrain2.png" alt="Terrain 2"></a>
+        <a href="terrain3.html"><img src="Terrain3.png" alt="Terrain 3"></a>
+        <a href="terrain4.html"><img src="Terrain4.png" alt="Terrain 4"></a>
+        <a href="terrain5.html"><img src="Terrain5.png" alt="Terrain 5"></a>
+        <a href="terrain6.html"><img src="Terrain6.png" alt="Terrain 6"></a>
+        <a href="terrain7.html"><img src="Terrain7.png" alt="Terrain 7"></a>
+        <a href="terrain8.html"><img src="Terrain8.png" alt="Terrain 8"></a>
+        <div class="video-container">
+        </div>
+    </div>
+</body>
+</html>
