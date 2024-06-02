@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rechercher</title>
+<meta charset="utf-8">
+	<!-- Dernier CSS compilé et minifié -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- Bibliothèque jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<!-- Dernier JavaScript compilé -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+ <style>
+        #search {
+            width: 300px;
+            border: 1px solid black;
+            border-radius: 30px;
+            padding-left: 20px;
+            display: block;
+            margin: 0 auto; /* Pour centrer horizontalement */
+        }
+        .bouton {
+            background-color: #007a7b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .bouton:hover {
+            background-color: #005d5e;
+        }
+    </style>
+
+
+
+</head>
+</style>
+</head>
+<body style="font-family: 'Playfair Display';
+	     font-size: 17px;">
+
+
+<div class="container-fluid" >
+
+<div style="text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-bottom: 1px solid #007a7b;">
+    <div class="logo">
+        <img src="logo.png" alt="logo" style="  height: 100px;">
+    </div>
+    <div style=" color: #007a7b;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 10px;">
+        OMNES Immobilier
+    </div>
+</div>
+
+<nav style="background-color: #007a7b;
+            padding: 10px 0;">
+    <ul style="list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;">
+        <li style=" margin: 0 15px;"><a href="accueil.html" style="color: white;
+            text-decoration: none;
+            font-size: 18px;">Accueil</a></li>
+        <li style=" margin: 0 15px;"><a href="parcourir.html" style="color: white;
+            text-decoration: none;
+            font-size: 18px;">Tout Parcourir</a></li>
+        <li style=" margin: 0 15px;"><a href="rechercher.html" style="color: white;
+            text-decoration: none;
+            font-size: 18px;">Rechercher</a></li>
+        <li style=" margin: 0 15px;"><a href="rendezvous.php" style="color: white;
+            text-decoration: none;
+            font-size: 18px;">Rendez-vous</a></li>
+        <li style=" margin: 0 15px;"><a href="moncompte.php" style="color: white;
+            text-decoration: none;
+            font-size: 18px;">Mon Compte</a></li>
+    </ul>
+</nav>
+
+<br>
+<br>
+<br>
+<br>
+
+	<input type="search" id="search" value="" placeholder="Rechercher..." onchange="ouvrir()">
+
+	<input class="bouton" type="button" id="button" onclick="ouvrir()" value="Lancer la recherche">
+ 
+    
+    <script>
+        function ouvrir() {
+            var a = document.getElementById("search").value;
+
+
+             if (a === "créer un compte") {
+                window.open("creer_compte.html");
+            }
+
+            else if (a === "connexion") {
+                window.open("connexion.html");
+            }
+            
+            else if (a === "immobilier commercial") {
+                window.open("i_commercial.html");
+            }
+           else if (a === "immobilier résidentiel"){
+                window.open("i_residentiel.html");
+            }
+            else if (a === "immobilier à louer"){
+                window.open("a_louer.html");
+            }
+            else if (a === "terrain"){
+                window.open("terrain.html");
+            }
+
+           else if (a === "Eric Bonneval") {
+                window.open("agent1.html");
+            }
+           else if (a === "Jacques Clément"){
+            	window.open("agent2.html");
+            }
+            else if (a === "Vanessa Bordier"){
+            	window.open("agent3.html");
+            }
+            else if (a === "Jacqueline Marcadrie"){
+            	window.open("agent4.html");
+            }
+            else if (a === "Aurélie Bourbon"){
+            	window.open("agent5.html");
+            }
+
+           else if (a === "Pierre Martin") {
+                window.open("agent6.html");
+            }
+           else if (a === "Jean-Baptiste Dupont"){
+            	window.open("agent7.html");
+            }
+            else if (a === "Jacques Chirac"){
+            	window.open("agent8.html");
+            }
+            else if (a === "Perrine Ronaldo"){
+            	window.open("agent9.html");
+            }
+             else if (a === "Juliette Uzumaki"){
+                window.open("agent10.html");
+            }
+            else if (a === "Christian Lee"){
+            	window.open("agent11.html");
+            }
+            else if (a === "Anna Conda"){
+                window.open("agent12.html");
+            }
+            else if (a === "Marc Assin"){
+                window.open("agent13.html");
+            }
+            else if (a === "Claire Voyant"){
+                window.open("agent14.html");
+            }
+            else if (a === "Johnny Vélocité"){
+                window.open("agent15.html");
+            }
+            else if (a === "Sophie Stiket"){
+                window.open("agent16.html");
+            }
+            else if (a === "Kyks Mbappinho"){
+                window.open("agent17.html");
+            }
+            else if (a === "Maria Nadal"){
+                window.open("agent18.html");
+            }
+            else if (a === "Jean Neymar"){
+                window.open("agent19.html");
+            }
+            else if (a === "Iris Sistible"){
+                window.open("agent20.html");
+            }
+
+            else if (a === "bureau à louer à Saint-Cloud"){
+                window.open("IC1.html");
+            }
+            else if (a === "local à louer à Argelès-sur-Mer"){
+                window.open("IC2.html");
+            }
+             else if (a === "bureau à louer à Paris"){
+                window.open("IC3.html");
+            }
+            else if (a === "bureau à louer à Strasbourg"){
+                window.open("IC4.html");
+            }
+            
+            else if (a === "bureau à louer à Montpellier") {
+                window.open("IC5.html");
+            }
+            else if (a === "entrepôt à louer à Blois"){
+                window.open("IC6.html");
+            }
+            else if (a === "appartement à louer au Mans"){
+                window.open("AL2.html");
+            }
+            else if (a === "appartement à louer à Cagnes-sur-Mer"){
+                window.open("AL3.html");
+            }
+             else if (a === "appartement à louer à Trélissac"){
+                window.open("AL4.html");
+            }
+            else if (a === "appartement à louer à Amiens"){
+                window.open("AL5.html");
+            }
+            
+            else if (a === "appartement à louer à Paris") {
+                window.open("AL6.html");
+            }
+           else if (a === "appartement à louer à Toulouse"){
+                window.open("AL7.html");
+            }
+            else if (a === "appartement à louer à Caen"){
+                window.open("AL8.html");
+            }
+
+
+
+
+            else if (a === "propriété résidentielle à Saint-Ouen-sur-Seine"){
+                window.open("IR1.html");
+            }
+            else if (a === "propriété résidentielle à Nice"){
+                window.open("IR2.html");
+            }
+             else if (a === "propriété résidentielle à Montigny-le-Bretonneux"){
+                window.open("IR3.html");
+            }
+            else if (a === "propriété résidentielle à Rouen"){
+                window.open("IR4.html");
+            }
+            
+            else if (a === "propriété résidentielle à Bezons") {
+                window.open("IR5.html");
+            }
+           else if (a === "propriété résidentielle à Bry-sur-Marne"){
+                window.open("IR6.html");
+            }
+            else if (a === "propriété résidentielle à Paris 12ème"){
+                window.open("IR7.html");
+            }
+            else if (a === "propriété résidentielle à Asnières-sur-Seine"){
+                window.open("IR8.html");
+            }
+            
+            else if (a === "propriété résidentielle à Saint-Ouen-sur-Seine") {
+                window.open("IR9.html");
+            }
+           else if (a === "propriété résidentielle à Annecy"){
+                window.open("IR10.html");
+            }
+            else if (a === "propriété résidentielle à Grenoble"){
+                window.open("IR11.html");
+            }
+            else if (a === "propriété résidentielle à Coulommiers"){
+                window.open("IR12.html");
+            }
+
+
+            else if (a === "terrain à vendre à Nort-sur-Erdre") {
+                window.open("terrain1.html");
+            }
+           else if (a === "terrain à vendre à Agen"){
+                window.open("terrain2.html");
+            }
+            else if (a === "terrain à vendre à Donzy"){
+                window.open("terrain3.html");
+            }
+            else if (a === "terrain à vendre à Castelnau le Lez"){
+                window.open("terrain4.html");
+            }
+            else if (a === "terrain à vendre à Ajaccio") {
+                window.open("terrain5.html");
+            }
+           else if (a === "terrain à vendre à Lille"){
+                window.open("terrain6.html");
+            }
+            else if (a === "terrain à vendre à Auxerrele"){
+                window.open("terrain7.html");
+            }
+            else if (a === "terrain à vendre à Lanester"){
+                window.open("terrain8.html");
+            }
+           
+           
+              else if (a === "Saint-Cloud"){
+                window.open("IC1.html");
+            }
+            else if (a === "Argelès-sur-Mer"){
+                window.open("IC2.html");
+            }
+             
+            else if (a === "Strasbourg"){
+                window.open("IC4.html");
+            }
+            
+            else if (a === "Montpellier") {
+                window.open("IC5.html");
+            }
+            else if (a === "Blois"){
+                window.open("IC6.html");
+            }
+            else if (a === "Le Mans"){
+                window.open("AL2.html");
+            }
+            else if (a === "Cagnes-sur-Mer"){
+                window.open("AL3.html");
+            }
+             else if (a === "Trélissac"){
+                window.open("AL4.html");
+            }
+            else if (a === "Amiens"){
+                window.open("AL5.html");
+            }
+           else if (a === "Toulouse"){
+                window.open("AL7.html");
+            }
+            else if (a === "Caen"){
+                window.open("AL8.html");
+            }
+
+
+
+
+            else if (a === "Saint-Ouen-sur-Seine"){
+                window.open("IR1.html");
+            }
+            else if (a === "Nice"){
+                window.open("IR2.html");
+            }
+             else if (a === "Montigny-le-Bretonneux"){
+                window.open("IR3.html");
+            }
+            else if (a === "Rouen"){
+                window.open("IR4.html");
+            }
+            
+            else if (a === "Bezons") {
+                window.open("IR5.html");
+            }
+           else if (a === "Bry-sur-Marne"){
+                window.open("IR6.html");
+            }
+           
+            else if (a === "Asnières-sur-Seine"){
+                window.open("IR8.html");
+            }
+            
+            else if (a === "Six-Fours-les-Plages") {
+                window.open("IR9.html");
+            }
+           else if (a === "Annecy"){
+                window.open("IR10.html");
+            }
+            else if (a === "Grenoble"){
+                window.open("IR11.html");
+            }
+            else if (a === "Coulommiers"){
+                window.open("IR12.html");
+            }
+
+
+            else if (a === "Nort-sur-Erdre") {
+                window.open("terrain1.html");
+            }
+           else if (a === "Agen"){
+                window.open("terrain2.html");
+            }
+            else if (a === "Donzy"){
+                window.open("terrain3.html");
+            }
+            else if (a === "Castelnau le Lez"){
+                window.open("terrain4.html");
+            }
+            else if (a === "Ajaccio") {
+                window.open("terrain5.html");
+            }
+           else if (a === "Lille"){
+                window.open("terrain6.html");
+            }
+            else if (a === "Auxerre"){
+                window.open("terrain7.html");
+            }
+            else if (a === "Lanester"){
+                window.open("terrain8.html");
+            }
+             else if (a === "Paris"){
+                window.open("paris.html");
+            }
+           
+
+           
+           
+
+
+
+            else if (a === "21"){
+                window.open("IC1.html");
+            }
+            else if (a === "22"){
+                window.open("IC2.html");
+            }
+             else if (a === "23"){
+                window.open("IC3.html");
+            }
+            else if (a === "24"){
+                window.open("IC4.html");
+            }
+            
+            else if (a === "25") {
+                window.open("IC5.html");
+            }
+            else if (a === "26"){
+                window.open("IC6.html");
+            }
+
+
+
+            else if (a === "41"){
+                window.open("AL2.html");
+            }
+            else if (a === "42"){
+                window.open("AL3.html");
+            }
+             else if (a === "43"){
+                window.open("AL4.html");
+            }
+            else if (a === "44"){
+                window.open("AL5.html");
+            }
+            
+            else if (a === "45") {
+                window.open("AL6.html");
+            }
+           else if (a === "46"){
+                window.open("AL7.html");
+            }
+            else if (a === "47"){
+                window.open("AL8.html");
+            }
+
+
+
+
+            else if (a === "11"){
+                window.open("IR1.html");
+            }
+            else if (a === "12"){
+                window.open("IR2.html");
+            }
+             else if (a === "13"){
+                window.open("IR3.html");
+            }
+            else if (a === "14"){
+                window.open("IR4.html");
+            }
+            
+            else if (a === "15") {
+                window.open("IR5.html");
+            }
+           else if (a === "16"){
+                window.open("IR6.html");
+            }
+            else if (a === "17"){
+                window.open("IR7.html");
+            }
+            else if (a === "18"){
+                window.open("IR8.html");
+            }
+            
+            else if (a === "19") {
+                window.open("IR9.html");
+            }
+           else if (a === "110"){
+                window.open("IR10.html");
+            }
+            else if (a === "111"){
+                window.open("IR11.html");
+            }
+            else if (a === "112"){
+                window.open("IR12.html");
+            }
+
+
+            else if (a === "31") {
+                window.open("terrain1.html");
+            }
+           else if (a === "32"){
+                window.open("terrain2.html");
+            }
+            else if (a === "33"){
+                window.open("terrain3.html");
+            }
+            else if (a === "34"){
+                window.open("terrain4.html");
+            }
+            else if (a === "35") {
+                window.open("terrain5.html");
+            }
+           else if (a === "36"){
+                window.open("terrain6.html");
+            }
+            else if (a === "37"){
+                window.open("terrain7.html");
+            }
+            else if (a === "38"){
+                window.open("terrain8.html");
+            }
+
+
+
+
+
+
+             else if (a === "Eric Bonneval spécialité") {
+                window.open("i_commercial.html");
+            }
+           else if (a === "Jacques Clément spécialité"){
+                window.open("i_commercial.html");
+            }
+            else if (a === "Vanessa Bordier spécialité"){
+                window.open("i_commercial.html");
+            }
+            else if (a === "Jacqueline Marcadrie spécialité"){
+                window.open("i_residentiel.html");
+            }
+            else if (a === "Aurélie Bourbon spécialité"){
+                window.open("i_residentiel.html");
+            }
+
+           else if (a === "Pierre Martin spécialité") {
+                window.open("terrain.html");
+            }
+           else if (a === "Jean-Baptiste Dupont spécialité"){
+                window.open("a_louer.html");
+            }
+            else if (a === "Jacques Chirac spécialité"){
+                window.open("a_louer.html");
+            }
+            else if (a === "Perrine Ronaldo spécialité"){
+                window.open("terrain.html");
+            }
+             else if (a === "Juliette Uzumaki spécialité"){
+                window.open("i_residentiel.html");
+            }
+            else if (a === "Christian Lee spécialité"){
+                window.open("terrain.html");
+            }
+            else if (a === "Anna Conda spécialité"){
+                window.open("a_louer.html");
+            }
+            else if (a === "Marc Assin spécialité"){
+                window.open("i_commercial.html");
+            }
+            else if (a === "Claire Voyant spécialité"){
+                window.open("a_louer.html");
+            }
+            else if (a === "Johnny Vélocité spécialité"){
+                window.open("i_residentiel.html");
+            }
+            else if (a === "Sophie Stiket spécialité"){
+                window.open("i_commercial.html");
+            }
+            else if (a === "Kyks Mbappinho spécialité"){
+                window.open("terrain.html");
+            }
+            else if (a === "Maria Nadal spécialité"){
+                window.open("a_louer.html");
+            }
+            else if (a === "Jean Neymar spécialité"){
+                window.open("terrain.html");
+            }
+            else if (a === "Iris Sistible spécialité"){
+                window.open("i_residentiel.html");
+            }
+
+           
+
+
+            else{
+           		 alert("Aucun mot clé associé, veuillez réessayer !");
+            }
+            
+        }
+    </script>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+        <div style="background-color: #007a7b; 
+            padding: 20px;
+            margin: 0;
+            width: 100%;
+            color: white;">
+        	<div class="container">
+        	<div style="display: flex;
+            		justify-content: center;
+            		align-items: center;
+            		padding: 20px 0;">
+        		<img src="logoB.png" class="media-object" width="150" height="100">
+        	</div>
+        	
+		<div class="row">
+			<div class="col-lg-8 col-md-8 col-sm-12">
+				<b><h6 class="text-uppercase font-weight-bold">Informations additionnelles</h6></b>
+				<ul>
+					<li><p>
+	 				Toutes tentatives de copies de ce site et de fraude en notre nom sera sanctionné de 70 000 euros d'amendes, en application de l'article 41.39,2 du Code de la propriété  Intellectuelle.
+	 				<p></li>
+	 				<li><p>Toutes vos données sont protégées en accord avec le RGPD.
+					</p></li>
+				</ul>
+				
+			</div>
+ 		<div class="col-lg-4 col-md-4 col-sm-12">
+ 	 <b><h6 class="text-uppercase font-weight-bold">Contact</h6></b>
+	 <p>
+	 37, quai de Grenelle, 75015 Paris, France <br>
+	 <a href="mailto:omnes.immobilier@gmail.com">omnes.immobilier@gmail.com</a> <br>
+	 +33 01 02 03 04 05 <br>
+	 +33 01 03 02 05 04
+	</p>
+		</div>
+	</div>
+	<br>
+	<div class="footer-copyright text-center">&copy; 2024 Copyright | Droit d'auteur: Omnes Immobilier</div>
+ 	<br>
+ 	<br>
+        </div>
+
+	
+
+
+
+
+
+
+ 	
+
+	
+</div>
+
+
+</body>
+</html>
