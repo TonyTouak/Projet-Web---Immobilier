@@ -3,8 +3,15 @@
 <head>
     <title>Propriété Résidentielle 11</title>
     <meta charset="utf-8">
+    <!-- Dernier CSS compilé et minifié -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Bibliothèque jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Dernier JavaScript compilé -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
     <style>
-        body {
+        .corps {
             font-family: 'Playfair Display', serif;
             padding: 0;
             display: flex;
@@ -33,16 +40,74 @@
         .property-details h3 {
             margin-top: 0;
         }
+        .bouton {
+            background-color: #007a7b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
     </style>
 </head>
-<body>
+<body style="font-family: 'Playfair Display';
+         font-size: 17px;">
+
+<div class="container-fluid" >
+
+<div style="text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-bottom: 1px solid #007a7b;">
+    <div class="logo">
+        <img src="logo.png" alt="logo" style="  height: 100px;">
+    </div>
+    <div style=" color: #007a7b;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 10px;">
+        OMNES Immobilier
+    </div>
+</div>
+
+<nav style="background-color: #007a7b;
+            padding: 10px 0;">
+    <ul style="list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;">
+        <li style=" margin: 0 15px;"><a href="accueil.html" style="color: white;
+            text-decoration: none;
+            font-size: 18px;">Accueil</a></li>
+        <li style=" margin: 0 15px;"><a href="parcourir.html" style="color: white;
+            text-decoration: none;
+            font-size: 18px;">Tout Parcourir</a></li>
+        <li style=" margin: 0 15px;"><a href="rechercher.html" style="color: white;
+            text-decoration: none;
+            font-size: 18px;">Rechercher</a></li>
+        <li style=" margin: 0 15px;"><a href="rendezvous.php" style="color: white;
+            text-decoration: none;
+            font-size: 18px;">Rendez-vous</a></li>
+        <li style=" margin: 0 15px;"><a href="moncompte.php" style="color: white;
+            text-decoration: none;
+            font-size: 18px;">Mon Compte</a></li>
+    </ul>
+</nav>
+<div class="corps">
     <div class="container">
         <h1>Propriété Résidentielle - Grenoble</h1>
         <img src="IR11.jpg" alt="Image de la propriété" class="image1">
         
         <div class="property-details">
             <h3>Descriptions</h3>
-            <p><b>Numéro de la propriété:</b> 11</p>
+            <p><b>Numéro de la propriété:</b> 111</p>
             <p><b>Nombre de pièces:</b> 6</p>
             <p><b>Nombre de chambres:</b> 4</p>
             <p><b>Dimensions:</b> 160m²</p>
@@ -50,6 +115,49 @@
             <p><b>Balcon:</b> Oui</p>
             <p><b>Parking:</b> Oui</p>
             <p><b>Adresse:</b> 20 rue Victor Hugo, 38000 Grenoble, France</p>
+            <p><b>Montant:</b> 270 000€ </p>
+            <a href="paiement.php" class="bouton">Payer</a>
+        </div>
+    </div>  
+        <div style="background-color: #007a7b; 
+            padding: 20px;
+            margin: 0;
+            width: 100%;
+            color: white;">
+            <div class="container">
+            <div style="display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px 0;">
+                <img src="logoB.png" class="media-object" width="150" height="100">
+            </div>
+            
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <b><h6 class="text-uppercase font-weight-bold">Informations additionnelles</h6></b>
+                <ul>
+                    <li><p>
+                    Toutes tentatives de copies de ce site et de fraude en notre nom sera sanctionné de 70 000 euros d'amendes, en application de l'article 41.39,2 du Code de la propriété  Intellectuelle.
+                    <p></li>
+                    <li><p>Toutes vos données sont protégées en accord avec le RGPD.
+                    </p></li>
+                </ul>
+                
+            </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+     <b><h6 class="text-uppercase font-weight-bold">Contact</h6></b>
+     <p>
+     37, quai de Grenelle, 75015 Paris, France <br>
+     <a href="mailto:omnes.immobilier@gmail.com">omnes.immobilier@gmail.com</a> <br>
+     +33 01 02 03 04 05 <br>
+     +33 01 03 02 05 04
+    </p>
+        </div>
+    </div>
+    <br>
+    <div class="footer-copyright text-center">&copy; 2024 Copyright | Droit d'auteur: Omnes Immobilier</div>
+    <br>
+    <br>
         </div>
     </div>
 </body>

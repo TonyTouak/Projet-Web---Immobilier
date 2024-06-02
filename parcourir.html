@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Bureau à Louer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tout Parcourir</title>
     <meta charset="utf-8">
     <!-- Dernier CSS compilé et minifié -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -9,55 +11,61 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <!-- Dernier JavaScript compilé -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <meta charset="utf-8">
     <style>
-        .corps {
-            font-family: 'Playfair Display', serif;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-        .container {
-            max-width: 800px;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .image1 {
-            width: 50%;
-        }
-        .video-container {
-            width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        .property-details {
-            margin-bottom: 20px;
-        }
-        .property-details h3 {
-            margin-top: 0;
-        }
-        .bouton {
-            background-color: #007a7b;
-            color: white;
-            border: none;
-            padding: 10px 20px;
+
+        header {
+            background-color: white;
+            color: black;
             text-align: center;
+            font-weight: normal; 
+        }
+        header img {
+            height: 70px;
+            width: 130px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+        h1 {
+            font-weight: normal; /* Ajoutez cette ligne pour enlever le gras */
+        }
+        h2 {
+            text-decoration: underline;
+            color: #007a7b;
+            font-weight: normal; 
+        }
+         .category img {
+            margin-right: 1rem;
+            width: 150px;
+            height: auto;
+        }
+        .category a {
+            color: black;
             text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px 2px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+        }
+        .category a:hover {
+            text-decoration: underline;
+        }
+        .section-title {
+            text-align: center;
+            color: #007a7b;
+            margin: 20px 0;
+        }
+         .section-divider {
+            border: 1px solid #007a7b;
+            width: 70%;
+            margin: 0 auto 30px;
         }
     </style>
 </head>
 <body style="font-family: 'Playfair Display';
-         font-size: 17px;">  
+         font-size: 17px;">
+  
+
 <div class="container-fluid" >
 
 <div style="text-align: center;
@@ -99,34 +107,44 @@
             font-size: 18px;">Mon Compte</a></li>
     </ul>
 </nav>
-<div class="corps">
+
+<div class="container">
 
 
+     <div class="text-center">
+       
+        <h2 class="section-title">Accueil Immobilier</h2>
+     <div class="section-divider" style="width: 700px;"></div>    
+
+   
     <div class="container">
-
-
-        <h1>Bureau à Louer - Paris</h1>
-        <img src="IC3.png" alt="Image du bureau" class="image1">
-        
-        <div class="property-details">
-            <h3>Description</h3>
-            <p><b>Numéro de la propriété:</b> 23</p>
-            <p><b>Type de propriété:</b> Bureau</p>
-            <p><b>Surface:</b> 152m²</p>
-            <p><b>Nombre de bureaux:</b> 5</p>
-            <p><b>Salles de réunion:</b> 1</p>
-            <p><b>Étage:</b> 4ème</p>
-            <p><b>Parking:</b> Non</p>
-            <p><b>Adresse:</b> 147 Rue de Rennes, 75006 Paris, France</p>
-            <p><b>Montant:</b> 1100€/mois </p>
-            <a href="paiement.php" class="bouton">Payer</a>
+        <div class="category">
+            <h2><a href="i_residentiel.php">Immobilier résidentiel</a></h2>
+            <img src="residentiel.jpg" alt="Immobilier résidentiel">
+            <p>Les propriétés résidentielles sont des biens immobiliers destinés principalement à l'habitation. Elles couvrent une large gamme de types de logements, chacun avec ses propres caractéristiques et avantages. Voici quelques exemples de propriétés résidentielles : les maisons unifamiliales, les condos, les coopératives, les duplex, les maisons
+en rangée et les résidences multifamiliales.</p>
         </div>
-
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/FTamZ-okEg4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="category">
+            <h2><a href="i_commercial.php">Immobilier commercial</a></h2>
+            <img src="commercial.jpg" alt="Immobilier commercial">
+            <p>Les propriétés commerciales sont des biens immobiliers utilisés exclusivement à des fins professionnelles, commerciales ou industrielles. Elles englobent une variété de types de bâtiments et de structures conçus pour soutenir des activités commerciales.Voici quelques exemples de propriétés commerciales : les complexes d'appartements, les stations-service, les
+épiceries, les hôpitaux, les hôtels, les bureaux, les parkings, les restaurants, les centres
+commerciaux, les magasins et les théâtres. </p>
+        </div>
+        <div class="category">
+            <h2><a href="terrain.php">Terrain</a></h2>
+             <img src="terrain.jpg" alt="Terrain">
+            <p>Les terrains sont des parcelles de terre qui peuvent être utilisées à diverses fins, allant de la construction résidentielle et commerciale à l'agriculture et à la conservation.Comprend les propriétés non développées, les terrains vacants et les terres agricoles telles que les fermes, les vergers, les ranchs et les terres à bois.</p>
+        </div>
+        <div class="category">
+            <h2><a href="a_louer.php">Appartement à louer</a></h2>
+            <img src="appartement.jpg" alt="Appartement à louer">
+            <p>Les appartements à louer sont des unités d'habitation disponibles à la location pour une durée déterminée. Ils offrent une alternative flexible à l'achat de propriété, permettant aux locataires de vivre dans un endroit sans les responsabilités et les engagements financiers liés à la propriété.</p>
         </div>
     </div>
-        <div style="background-color: #007a7b; 
+    </div>
+</div>
+<div style="background-color: #007a7b; 
             padding: 20px;
             margin: 0;
             width: 100%;
@@ -165,7 +183,6 @@
     <div class="footer-copyright text-center">&copy; 2024 Copyright | Droit d'auteur: Omnes Immobilier</div>
     <br>
     <br>
-        </div>
-    </div>
+        </div>  
 </body>
 </html>

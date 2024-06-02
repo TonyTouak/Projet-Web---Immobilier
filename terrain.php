@@ -1,7 +1,32 @@
+<?php
+$database = "immobilier";
+$db_handle = mysqli_connect('localhost', 'root', 'On23wm!+t');
+$db_found = mysqli_select_db($db_handle, $database);
+
+$properties = [];
+
+if ($db_found) {
+    $sql = "SELECT * FROM terrain";
+    $result = mysqli_query($db_handle, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $properties[] = $row;
+        }
+    } else {
+        echo "pas de résultat";
+    }
+    mysqli_close($db_handle);
+} else {
+    echo "Database not found";
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bureau à Louer</title>
+    <title>Terrains à vendre</title>
     <meta charset="utf-8">
     <!-- Dernier CSS compilé et minifié -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -13,32 +38,71 @@
     <style>
         .corps {
             font-family: 'Playfair Display', serif;
-            padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: column; 
+            align-items: center; 
         }
-        h1, h2, h3 {
+        h1 {
             font-family: 'Playfair Display', serif;
+            margin: 20px 0; 
+            font-weight: 700;
+            font-size: 2.5em; 
         }
-        .container {
-            max-width: 800px;
-            padding: 20px;
-            margin-top: 20px;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin-top: 20px; 
         }
-        .image1 {
-            width: 50%;
+        .gallery a {
+            width: 24%;
+            margin: 0.5%;
+            box-sizing: border-box;
+        }
+        .gallery img {
+            width: 100%;
+            height: 150px; 
+            object-fit: cover; 
+            display: block;
         }
         .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            margin-bottom: 20px;
+            height: 100%;
         }
-        .property-details {
-            margin-bottom: 20px;
+        .agents-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
         }
-        .property-details h3 {
-            margin-top: 0;
+        .agent {
+            text-align: center;
+            margin: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(20% - 40px); 
+            box-sizing: border-box;
+        }
+        .agent img {
+            border-radius: 50%;
+            margin-bottom: 15px;
+            width: 100px;
+            height: 100px; 
+        }
+        .agent h4 {
+            margin-bottom: 10px;
         }
         .bouton {
             background-color: #007a7b;
@@ -57,7 +121,8 @@
     </style>
 </head>
 <body style="font-family: 'Playfair Display';
-         font-size: 17px;">  
+         font-size: 17px;">
+
 <div class="container-fluid" >
 
 <div style="text-align: center;
@@ -99,34 +164,59 @@
             font-size: 18px;">Mon Compte</a></li>
     </ul>
 </nav>
-<div class="corps">
+
+<h1>Liste des Terrains</h1>
+    <div class="gallery">
+        <?php foreach ($properties as $property) { 
+            // Enlever le premier chiffre du Num_Propriété
+            $num_propriete = substr($property['Num_Propriété'], 1);
+        ?>
+            <a href="IR<?php echo $num_propriete; ?>.html"><img src="<?php echo $property['Photo']; ?>" alt="Property <?php echo $num_propriete; ?>"></a>
+        <?php } ?>
+    </div>
+   </div>
 
 
-    <div class="container">
-
-
-        <h1>Bureau à Louer - Paris</h1>
-        <img src="IC3.png" alt="Image du bureau" class="image1">
-        
-        <div class="property-details">
-            <h3>Description</h3>
-            <p><b>Numéro de la propriété:</b> 23</p>
-            <p><b>Type de propriété:</b> Bureau</p>
-            <p><b>Surface:</b> 152m²</p>
-            <p><b>Nombre de bureaux:</b> 5</p>
-            <p><b>Salles de réunion:</b> 1</p>
-            <p><b>Étage:</b> 4ème</p>
-            <p><b>Parking:</b> Non</p>
-            <p><b>Adresse:</b> 147 Rue de Rennes, 75006 Paris, France</p>
-            <p><b>Montant:</b> 1100€/mois </p>
-            <a href="paiement.php" class="bouton">Payer</a>
-        </div>
-
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/FTamZ-okEg4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h1>Nos Experts en Terrain</h1>
+        <div class="agents-gallery">
+            <div class="agent">
+                <img src="agent6.png" alt="Agent 1">
+                <h4> Pierre Martin </h4>
+                <p>Expert en Terrain</p>
+                <a href="agent6.html" class="bouton">Voir le profil</a>
+            </div>
+            <div class="agent">
+                <img src="agent9.png" alt="Agent 2">
+                <h4> Perrine Ronaldo </h4>
+                <p>Expert en Terrain </p>
+                <a href="agent9.html" class="bouton">Voir le profil</a>
+            </div>
+            <div class="agent">
+                <img src="agent11.jpg" alt="Agent 3">
+                <h4> Christian Lee </h4>
+                <p>Expert en Terrain</p>
+                <a href="agent11.html" class="bouton">Voir le profil</a>
+            </div>
+            <div class="agent">
+                <img src="agent17.jpg" alt="Agent 4">
+                <h4> Kyks Mbappinho </h4>
+                <p>Expert en Terrain</p>
+                <a href="agent17.html" class="bouton">Voir le profil</a>
+            </div>
+            <div class="agent">
+                <img src="agent19.jpg" alt="Agent 5">
+                <h4> Jean Neymar </h4>
+                <p>Expert en Terrain</p>
+                <a href="agent19.html" class="bouton">Voir le profil</a>
+            </div>
         </div>
     </div>
-        <div style="background-color: #007a7b; 
+    <br>
+    <br>
+    <br>
+
+
+    <div style="background-color: #007a7b; 
             padding: 20px;
             margin: 0;
             width: 100%;
@@ -167,5 +257,6 @@
     <br>
         </div>
     </div>
+    
 </body>
 </html>
